@@ -9,7 +9,7 @@ function App() {
 		<div className="App">
 			<div className="App-container">
 				<AddForm tasks={tasks} setTasks={setTasks} />
-				<TaskList tasks={tasks} />
+				<TaskList tasks={tasks} setTasks={setTasks} />
 			</div>
 		</div>
 	);

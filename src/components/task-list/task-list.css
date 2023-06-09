@@ -1,0 +1,35 @@
+.task-list {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 33%;
+    padding: 0;
+}
+
+.task {
+    background-color: #191F2B;
+    width: 100%;
+    height: 6rem;
+    margin-block-end: 1rem;
+    padding: 0.2rem;
+    border-radius: 0.25rem;
+    border: 0.1px solid #070D1A;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    overflow-y: auto;
+    color: #ffffff;
+    /* scrollbar-width: none; */
+}
+
+.task::-webkit-scrollbar {
+    width: 2px;
+    /* background-color: transparent; */
+}
+
+.task::-webkit-scrollbar-track {
+    background-color: #070D1A;
+}
+
+.task::-webkit-scrollbar-thumb {
+    background-color: #ffffff;
+}

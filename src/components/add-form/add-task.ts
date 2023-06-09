@@ -6,7 +6,7 @@ const addTask = async (
 	input: string
 ) => {
 	if (input.length > 0) {
-		setTasks([...tasks, input]);
+		setTasks([input, ...tasks]);
 	}
 };
 export default addTask;

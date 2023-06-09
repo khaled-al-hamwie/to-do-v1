@@ -1,31 +1,12 @@
 import "./task-list.css";
-export function TaskList() {
-	return (
-		<ul className="task-list">
-			<div className="list">
-				<li className="task">{"hi fdjas;ljfa;s".repeat(456)}</li>
-			</div>
-			<div className="list">
-				<li className="task">{"hi fdjas;ljfa;s".repeat(456)}</li>
-			</div>
-			<div className="list">
-				<li className="task">{"hi fdjas;ljfa;s".repeat(456)}</li>
-			</div>
-			<div className="list">
-				<li className="task">{"hi fdjas;ljfa;s".repeat(456)}</li>
-			</div>
-			<div className="list">
-				<li className="task">{"hi fdjas;ljfa;s".repeat(456)}</li>
-			</div>
-			<div className="list">
+export function TaskList(props: any) {
+	const list = props.tasks.map((task: any, i: number) => {
+		return (
+			<div className="list" key={i}>
 				<span className="delete-icon-disable">x</span>
-				<li className="task task-focus">
-					hi fldasjk; jkldaf;s kladsf;j fdsl;alk dsfja fsal jasl
-					jdsfdsjlak fas fasfsdafsdafds fsdafdsfsdfds fjdsaljflasjfj
-					fjsakjflaj
-				</li>
+				<li className="task">{task}</li>
 			</div>
-			<li className="task">hi</li>
-		</ul>
-	);
+		);
+	});
+	return <ul className="task-list">{list}</ul>;
 }

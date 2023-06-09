@@ -11,6 +11,7 @@ export function InputForm(props: any) {
 			onKeyDown={(e) => {
 				if (e.key === "Enter") {
 					addTask(props.tasks, props.setTasks, props.input);
+					props.setInput("");
 					e.currentTarget.value = "";
 				}
 			}}

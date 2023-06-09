@@ -11,6 +11,7 @@ export function SubmitButton(props: any) {
 				) as HTMLInputElement;
 				addTask(props.tasks, props.setTasks, props.input);
 				if (inputForm) inputForm.value = "";
+				props.setInput("");
 			}}
 		/>
 	);

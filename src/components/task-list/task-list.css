@@ -7,23 +7,26 @@
     padding: 0;
 }
 
+.list {
+    position: relative;
+    margin-block-end: 1rem;
+}
+
 .task {
     background-color: #191F2B;
     width: 100%;
     height: 6rem;
-    margin-block-end: 1rem;
     padding: 0.2rem;
     border-radius: 0.25rem;
     border: 0.1px solid #070D1A;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
     overflow-y: auto;
+    overflow-x: auto;
     color: #ffffff;
-    /* scrollbar-width: none; */
 }
 
 .task::-webkit-scrollbar {
     width: 2px;
-    /* background-color: transparent; */
 }
 
 .task::-webkit-scrollbar-track {
@@ -32,4 +35,43 @@
 
 .task::-webkit-scrollbar-thumb {
     background-color: #ffffff;
+}
+
+
+.task-focus {
+    background-color: #070D1A;
+    transform: scale(0.96);
+}
+
+.delete-icon {
+    display: block;
+    width: 1.8rem;
+    height: 1.8rem;
+    position: absolute;
+    right: -1rem;
+    top: -.6rem;
+    border-radius: 50%;
+    line-height: 20px;
+    background-color: #f54b64;
+    text-align: center;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.delete-icon::selection {
+    background-color: transparent;
+    color: inherit;
+}
+
+.delete-icon:hover {
+    background-color: #d43d56;
+}
+
+.delete-icon:hover::selection {
+    background-color: transparent;
+    color: inherit;
+}
+
+.delete-icon-disable {
+    display: none;
 }
